@@ -3,8 +3,9 @@
 int main() {
 
     int m = 3, n = 3;
-    int a[4][4];
-    int b[4][4];
+    int a[3][3];
+    int b[3][3];
+    int sum[3][3];
 
     printf("*********This is a 3 x 3 matrix**********");
 
@@ -36,9 +37,9 @@ int main() {
         printf("\n");
     }
 
-    printf("\nTriplet form: \n\n");
+     printf("\nTriplet form: \n\n");
 
-    printf("\nMatrix A:\n");
+    printf("\nTriplet form of Matrix A:\n");
     for(int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if(a[i][j] == 0) {
@@ -50,7 +51,7 @@ int main() {
         }
     }
 
-    printf("\nMatrix B:\n");
+    printf("\nTriplet form of Matrix B:\n");
     for(int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if(b[i][j] == 0) {
@@ -60,6 +61,21 @@ int main() {
                 printf("[%d %d %d]\n", i, j, b[i][j]);
             }
         }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+        printf("\n");
+    }
+
+    printf("Summed matrix: \n");
+    for(int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d\t", sum[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;
