@@ -20,7 +20,7 @@ void push(int e) {
     else {
         a[++top] = e;
     }
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i <= top; i++) {
         printf("%d ", a[i]);
     }
 }
@@ -32,7 +32,7 @@ void pop() {
     else {
         printf("Element %d popped!\n", a[top--]);
     }
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i <= top; i++) {
         printf("%d ", a[i]);
     }
 }
@@ -65,10 +65,10 @@ void processStack() {
                 peek();
                 break;
             default:
-                printf("Exiting...");
-                break;
+            break;
         }
     }
+    printf("Exiting...");
 }
 
 int main() {
